@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>消防产品流向信息公开系统</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="ctx"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+	</head>
+	<body style="overflow-x: hidden;">
+		<section class="conInfo">
+			<div class="table" id="app">
+				<div class="reveal">
+					<div>
+						<nav>
+							<li><label>标识编号</label><span>{{seqNo}}</span></li>
+						</nav>
+					</div>
+					<div>
+						<nav>
+							<li><label>证书编号:</label><span>{{certificate.certificateNo}}</span></li>
+							<li><label>委托人名称:</label><span>{{certificate.companyName}}</span></li>
+
+							<li><label>证书名称:</label><span>{{certificate.certificateName}}</span></li>
+<!--							<li><label>产品主型:</label><span>{{certificateDetail.certificateModel}}</span></li>-->
+
+							<li><label>注册日期:</label><span>{{certificate.registerTime}}</span></li>
+							<li><label>截至日期:</label><span>{{certificate.certificateTime}}</span></li>
+						</nav>
+					</div>
+					<div class="product" v-if="contentFlag==true && certificateDetail != null">
+						<nav class="mb-10">
+							<li><label>产品名称:</label><span>{{certificateDetail.productName}}</span></li>
+							<li><label>规格型号:</label><span>{{certificateDetail.productModel}}</span></li>
+
+							<li><label>生产时间:</label><span>{{certificateDetail.productCreateTime}}</span></li>
+							<li><label>产品批号:</label><span>{{certificateDetail.productCode}}</span></li>
+						</nav>
+						<div v-if="certificateDealer != null">
+							<nav class="mb-10">
+								<li><label>经销商信息:</label><span>{{certificateDealer.dealerName}}</span></li>
+								<li><label>经销商地区:</label><span>{{certificateDealer.province}}{{certificateDealer.city}}{{certificateDealer.area}}</span></li>
+
+								<li><label>经销商地址:</label><span>{{certificateDealer.dealerAddr}}</span></li>
+								<li><label>到达经销商日期:</label><span>{{certificateDealer.arriveTime}}</span></li>
+							</nav>
+						</div>
+						<div v-if="certificateCompany != null ">
+							<nav class="mb-10">
+								<li><label>用户单位信息:</label><span>{{certificateCompany.companyName}}</span></li>
+								<li><label>用户单位地区:</label><span>{{certificateCompany.province}}{{certificateCompany.city}}{{certificateCompany.area}}</span></li>
+
+								<li><label>用户单位地址:</label><span>{{certificateCompany.companyAddr}}</span></li>
+								<li><label>到达日期:</label><span>{{certificateCompany.arriveTime}}</span></li>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</section>
+	</body>
+</html>
