@@ -200,45 +200,44 @@ header{
 				<div class="reveal">
 					<div>
 						<nav>
-							<li><label>标识编号</label><span>{{seqNo}}</span></li>
+							<li><label>标识编号</label><span>00009RYZ791WLH</span></li>
 						</nav>
 					</div>
 					<div>
 						<nav>
-							<li><label>证书编号:</label><span>{{certificate.certificateNo}}</span></li>
+							<li><label>证书编号:</label><span>CIL33846KO6930</span></li>
 							<li><label>委托人名称:</label><span>鑫科门业(天津)股份有限公司</span></li>
 
 							<li><label>证书名称:</label><span>高速卷门</span></li>
-<!--							<li><label>产品主型:</label><span>{{certificateDetail.certificateModel}}</span></li>-->
 
-							<li><label>注册日期:</label><span>{{certificate.registerTime}}</span></li>
-							<li><label>截至日期:</label><span>{{certificate.certificateTime}}</span></li>
+							<li><label>注册日期:</label><span>2020-12-28</span></li>
+							<li><label>截至日期:</label><span>2025-12-27</span></li>
 						</nav>
 					</div>
-					<div class="product" v-if="contentFlag==true && certificateDetail != null">
+					<div class="product">
 						<nav class="mb-10">
 							<li><label>产品名称:</label><span>高速卷门</span></li>
-							<li><label>规格型号:</label><span>{{certificateDetail.productModel}}</span></li>
+							<li><label>规格型号:</label><span>1500×1500×80mm</span></li>
 
 							<li><label>生产时间:</label><span>2022-06-05</span></li>
-							<li><label>产品批号:</label><span>{{certificateDetail.productCode}}</span></li>
+							<li><label>产品批号:</label><span>20220605-001</span></li>
 						</nav>
-						<div v-if="certificateDealer != null">
+						<div>
 							<nav class="mb-10">
 								<li><label>经销商信息:</label><span>鑫科门业(天津)股份有限公司</span></li>
 								<li><label>经销商地区:</label><span>天津市</span></li>
 
 								<li><label>经销商地址:</label><span>天津市武清区京滨工业园晋元道3号</span></li>
-								<li><label>到达经销商日期:</label><span>{{certificateDealer.arriveTime}}</span></li>
+								<li><label>到达经销商日期:</label><span>2022-06-13</span></li>
 							</nav>
 						</div>
-						<div v-if="certificateCompany != null ">
+						<div>
 							<nav class="mb-10">
-								<li><label>用户单位信息:</label><span>{{certificateCompany.companyName}}</span></li>
-								<li><label>用户单位地区:</label><span>{{certificateCompany.province}}{{certificateCompany.city}}{{certificateCompany.area}}</span></li>
+								<li><label>用户单位信息:</label><span>今麦郎面品（兖州）有限公司挂面提质增效项目</span></li>
+								<li><label>用户单位地区:</label><span>山东省济宁市兖州市</span></li>
 
-								<li><label>用户单位地址:</label><span>{{certificateCompany.companyAddr}}</span></li>
-								<li><label>到达日期:</label><span>{{certificateCompany.arriveTime}}</span></li>
+								<li><label>用户单位地址:</label><span>山东济宁市兖州区经济开发区广安路中段</span></li>
+								<li><label>到达日期:</label><span>2022-06-20</span></li>
 							</nav>
 						</div>
 					</div>
